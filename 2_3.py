@@ -1,4 +1,4 @@
-def main():
+def main() -> str:
     def check(string):
         dicts = {'(': ')', '{': '}', '[': ']'}
         open = []
