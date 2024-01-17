@@ -6,7 +6,7 @@ def print_hi(name):
         for i in m2:
             if i in m1:
                 numbers.add(i)
-        return print(len(numbers), 'элемента: ', [i for i in numbers])
+        return print(len(numbers), 'элемента: ', [i for i in numbers])#подсчет элементов в обоих списках
     def two():
         for i in m1:
             if i not in m2:
@@ -14,17 +14,17 @@ def print_hi(name):
         for i in m2:
             if i not in m1:
                 numbers.add(i)
-        return print(len(numbers), 'элемента: ', [i for i in numbers])
+        return print(len(numbers), 'элемента: ', [i for i in numbers])#подсчет элементов, присутствующих только в одном списке
     def three():
         for i in m1:
             if i not in m2:
                 numbers.add(i)
-        return print(len(numbers), 'элемента: ', [i for i in numbers])
+        return print(len(numbers), 'элемента: ', [i for i in numbers])#) количество оставшихся элементов в list1 после извлечения элементов из list2
     def four():
         for i in m2:
             if i not in m1:
                 numbers.add(i)
-        print(len(numbers), 'элемента: ', [i for i in numbers])
+        print(len(numbers), 'элемента: ', [i for i in numbers])) # количество оставшихся элементов в list1 после извлечения элементов из list2
     R = int(input('Количество элементов в первом списке '))
     R2 = int(input('Количество элементов во втором списке '))
     m1 = set()
