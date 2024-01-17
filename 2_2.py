@@ -1,4 +1,4 @@
-def print_hi(name):
+def print_hi(name) -> list:
     s = str(input())
     s.lower()#все символы преобразовавывает в маленькие
     m = []
