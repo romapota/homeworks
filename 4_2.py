@@ -4,7 +4,7 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 
-def print_hi(count):
+def print_hi(count) -> list:
     m = []
     m_all = [m,]
     for i in range(count):
@@ -14,7 +14,7 @@ def print_hi(count):
         for j in m:
             for s in m:
                 a = [i, j, s]
-                if (a not in m_all) and (i != j != s) and (i!=j) and (i!=s) and (s!=j):
+                if (a not in m_all) and (i != j != s) and (i!=j) and (i!=s) and (s!=j):#заполнение возможных перестановок, если такой еще не существует в массиве
                     m_all.append(a)
     return print(m_all)
 # Press the green button in the gutter to run the script.
