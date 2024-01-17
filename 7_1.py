@@ -1,7 +1,7 @@
-def santa_users(name):
+def santa_users(name:int) -> dict:
     s = []
     nameSurnameIndex = []
-    for i in range(name):
+    for i in range(name):#заполнение данных о пользователях
         name = str(input())
         index = str(input())
         s.append(name)
@@ -9,7 +9,7 @@ def santa_users(name):
         nameSurnameIndex.append(s)
         s = []
     for i in nameSurnameIndex:
-        if i[1] == '':
+        if i[1] == '':#если вместо индекса пусто, то добавляется None
             i[1] = 'None'
     return print(dict(nameSurnameIndex))
 
