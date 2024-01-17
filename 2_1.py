@@ -1,4 +1,4 @@
-def print_hi(name):
+def print_hi(name) -> int:
     s = str(input())
     m = []
     str_n = ''
