@@ -5,12 +5,11 @@ def print_hi(name):
     m = []
     p = 0
     p_p = 0
-    for i in range(1, len(str(number))+1):
-        m.append(((number%(10**i))-p)//10**(i-1))
-        p += ((number%(10**i))-p)
-    new_number = ''
+    for i in range(1, len(str(number))+1):#отделение каждой единицы, десятка, сотни и тд
+        m.append(((number%(10**i))-p)//10**(i-1))#вычитание из полученного отделения уже отделившийся части
+        p += ((number%(10**i))-p)#сумма наденной части
     for i in m:
-        new_number += str(i)
+        new_number += str(i)#нахождение нового числа
     if int(new_number) == number:
         return print(True)
     else:
