@@ -1,4 +1,4 @@
-def print_hi(name):
+def print_hi(name) -> int:
     negative_b = 0
     number = int(input())
     if number < 0:
