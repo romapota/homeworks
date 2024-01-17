@@ -1,5 +1,5 @@
 from itertools import product
-def get_pins():
+def get_pins() -> str:
     s = str(input('Строка: '))
     count = int(input('Количество строк: '))
     sp = []
