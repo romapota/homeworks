@@ -1,4 +1,4 @@
-def print_hi(name):
+def print_hi(name) -> bool:
     # Use a breakpoint in the code line below to debug your script.
     number = int(input())
     c = 0
