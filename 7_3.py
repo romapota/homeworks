@@ -1,5 +1,10 @@
 from itertools import product
-def get_pins(values):
+def get_pins(values: int) -> list:
+    var: dict
+    all_var: tuple
+    answer: list
+    s: str
+    answer_list: list
     var = {1: [1, 2, 4], 2: [1, 2, 3, 5], 3: [2, 3, 6], 4: [1, 4, 5, 7], 5: [2, 4, 8, 6, 5], 6: [6, 5, 9], 7: [4, 7, 8], 8: [5, 7, 0, 8, 9], 9: [6, 8, 9], 0: [8, 0]}
     all_var = set()
     for i in values:
