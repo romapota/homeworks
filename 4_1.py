@@ -1,3 +1,9 @@
+values: list
+values_sum: list
+values_sum_s: int
+n: int
+maxx:int
+value_m: int
 import itertools
 def get_pins():
     values = []
