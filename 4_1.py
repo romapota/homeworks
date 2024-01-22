@@ -8,7 +8,6 @@ def get_pins():
     values_m = None
     for i in range(n):
          values.append(int(input()))
-    values = [1, 2, 4, -5, -2]
     var_values = list(itertools.combinations(values, 4))#все возможные комбинации 4 чисел
     c = int(input('C = '))
     for i in var_values:#подсчет суммы
