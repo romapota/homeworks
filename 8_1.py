@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 from math import sin, cos
 from sympy import *
-
+from scipy import integrate
 x_max = 5 / 10 + 0.1
 x: list
 y: list
@@ -21,6 +21,8 @@ z_x: float
 y_z: float
 delx: int
 def main():
+    def integr(x):
+        return sin(x)*cos(x**2+5)
     x1, y1 = symbols('x1 y1')
     function = 'sin(x)*cos(x**2+5)'
     x_max = 5/10 + 0.1
@@ -78,6 +80,7 @@ def main():
     plt.plot([max(x)], [max(y)], 'o', color='b')#точка с максимальным значением функции
     plt.plot(x_kas, y_kas, linestyle = '--', color = 'k')#график касательной
     plt.plot(x_norm, y_norm, linestyle = '--', color = 'k')#график нормали
+    print('Длина дуги = ', (integrate.quad(integr, 0, 0.5)[0]))
     plt.show()
 
 
