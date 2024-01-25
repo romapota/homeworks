@@ -1,33 +1,19 @@
-values: list
-values_sum: list
-values_sum_s: int
-n: int
-maxx:int
-value_m: int
-import itertools
-def get_pins():
-    values = []
-    values_sum = []
-    values_sum_s = 0
-    n = int(input('N = '))
-    maxx = 10000
-    values_m = None
-    for i in range(n):
-         values.append(int(input()))
-    var_values = list(itertools.combinations(values, 4))#все возможные комбинации 4 чисел
-    c = int(input('C = '))
-    for i in var_values:#подсчет суммы
-        for j in i:
-            values_sum_s += j
-        values_sum.append(values_sum_s)
-        values_sum_s = 0
-    values_key = dict(zip(values_sum, var_values))
-    for i in values_sum:
-        if abs(c - i) < maxx:#нахождение максимально близкой суммы к заданной цели
-            value_m = i
-            maxx = abs(c-i)
-    return print(values_key[value_m]), print(value_m)
+def main(count):
+    numbers = [int(input()) for _ in range(count)]
+    target = int(input('Цель: '))
+    dict_info = {}
+    for index_one in range(count):
+        for index_two in range(count):
+            for index_three in range(count):
+                for index_four in range(count):
+                    if index_one != index_two and index_one != index_three and index_one != index_four and index_two != index_three and index_two != index_four and index_three != index_four:
+                        sum = numbers[index_one] + numbers[index_two] + numbers[index_three] + numbers[index_four]
+                        if sum == target:
+                            return print(numbers[index_one], numbers[index_two], numbers[index_three], numbers[index_four])
+                        else:
+                            delta = abs(target - sum)
+                            dict_info[delta] = [numbers[index_one], numbers[index_two], numbers[index_three], numbers[index_four]]
+    print(dict_info[min(dict_info)])
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    get_pins()
+    main(int(input('Количество чисел: ')))
